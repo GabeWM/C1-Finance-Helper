@@ -25,6 +25,7 @@ public class StatisticsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
+
         //Pie Chart
         PieChartView pieChartView = findViewById(R.id.chart);
         List<SliceValue> pieData = new ArrayList<>();
@@ -54,6 +55,12 @@ public class StatisticsActivity extends AppCompatActivity {
                 if (purchase.getMerchantId() == merchant.getId()) {
                     // important note we are just showing proof of concept this part would be vastly larger as it would organize
                     // every category possible into a certain subsection of categories pre determined
+
+
+        fetchData process = new fetchData();
+        process.execute();
+    }
+
 
                     //Housing
                     if (merchant.getCategories().contains("lodging") || merchant.getCategories().contains("housing")) {

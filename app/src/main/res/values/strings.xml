@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">C1-Finance-Helper</string>
     <string name="action_settings">Settings</string>
+    <string name="statistics">Statistics</string>
+    <string name="goal_setting">Goal Setting</string>
+    <string name="budget_setting">Budget Setting</string>
 </resources>

@@ -1,9 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.c1_finance_helper.MainActivity"
-    >
-
+    tools:context="com.example.c1_finance_helper.MainActivity">
     <item
         android:id="@+id/statisticsMenu"
         android:enabled="true"

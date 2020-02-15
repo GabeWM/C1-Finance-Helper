@@ -20,6 +20,8 @@ android {
 }
 
 dependencies {
+    // This is a third party library called hello charts used to build ... charts
+    api 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

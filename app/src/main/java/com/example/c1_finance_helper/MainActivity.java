@@ -1,16 +1,17 @@
 package com.example.c1_finance_helper;
 
-import android.os.Bundle;
+import lecho.lib.hellocharts.view.PieChartView;
+import lecho.lib.hellocharts.model.*;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.os.Bundle;
+import java.util.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        PieChartView pieChartView = findViewById(R.id.chart);
+        List<SliceValue> pieData = new ArrayList<>();
+        pieData.add(new SliceValue(10, Color.RED).setLabel("Health"));
+        pieData.add(new SliceValue(30, Color.BLUE).setLabel("Housing"));
+        pieData.add(new SliceValue(20, Color.GREEN).setLabel("Food"));
+        pieData.add(new SliceValue(30, Color.MAGENTA).setLabel("Transportation"));
+        pieData.add(new SliceValue(5, Color.YELLOW).setLabel("Personal and Family"));
+        pieData.add(new SliceValue(5, Color.BLACK).setLabel("Other"));
+        PieChartData pieChartData = new PieChartData(pieData);
+        pieChartData.setHasLabels(true).setValueLabelTextSize(8);
+        pieChartView.setPieChartData(pieChartData);
 
     }
 

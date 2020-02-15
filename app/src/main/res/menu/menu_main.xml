@@ -7,11 +7,11 @@
         android:title="@string/statistics"
         android:visible="true" />
     <item
+        android:id="@+id/budgetMenu"
+        android:title="@string/budget_setting" />
+    <item
         android:id="@+id/goalMenu"
         android:enabled="true"
         android:title="@string/goal_setting"
         android:visible="true" />
-    <item
-        android:id="@+id/budgetMenu"
-        android:title="@string/budget_setting" />
 </menu>

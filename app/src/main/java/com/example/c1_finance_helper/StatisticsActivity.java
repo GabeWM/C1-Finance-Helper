@@ -10,9 +10,11 @@ import com.reimaginebanking.api.nessieandroidsdk.models.Purchase;
 import lecho.lib.hellocharts.view.PieChartView;
 import lecho.lib.hellocharts.model.*;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import android.graphics.Color;
+import android.widget.TextView;
 
 public class StatisticsActivity extends AppCompatActivity {
 
@@ -94,10 +96,18 @@ public class StatisticsActivity extends AppCompatActivity {
         colors.add(Color.rgb(197, 39, 43));
         colors.add(Color.rgb(133, 28, 45));
 
+        DecimalFormat df2 = new DecimalFormat("#.##");
+        String info = "";
+
         for(String section : sections.keySet()) {
-            pieData.add(new SliceValue((float) (sections.get(section)/total), colors.get(i)).setLabel(section));
+            pieData.add(new SliceValue((float) (sections.get(section)/total), colors.get(i)).setLabel(section + " " + df2.format((sections.get(section)/total)*100) + "%"));
             i++;
+
+            info += section + ": $" + df2.format(sections.get(section)) + "\n";
         }
+
+        TextView textView = (TextView) findViewById(R.id.spendingInfo);
+        textView.setText(info);
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.c1_finance_helper;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,12 +33,28 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        int id = item.getItemId();
+        Intent myIntent = null;
+
+        /*
+        if(id == R.id.statisticsMenu){
+            myIntent = new Intent(MainActivity.this, StatisticsActivity.class);
+            startActivity(myIntent);
+
+            //return false;
+        }
+        else if(id == R.id.goalMenu){
+            myIntent = new Intent(MainActivity.this, GoalActivity.class);
+            startActivity(myIntent);
+        }
+
+        else if(id == R.id.budgetMenu){
+            myIntent = new Intent(MainActivity.this,BudgetActivity.class);
+            startActivity(myIntent);
+        }
+        */
+
 
         return super.onOptionsItemSelected(item);
     }
